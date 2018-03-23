@@ -1,0 +1,51 @@
+﻿<div class="post-list">
+<div style="padding:2%;">            		
+			<table>
+			<tr>
+			<td><img src="_content/images/eng_ico.png" alt="logo" height="55px"></td>
+			<td><h2>Professional Engine Design and Assembly</h2></td>
+			</tr>
+			</table>
+					<hr class="style-2" /> 
+					</div>
+    <% posts.forEach(function(post) { %>
+  <% if(post.webpage == "services") {%>
+  		<div>
+		<h1> <%= post.title %> </h1>
+		<%=post.webpage %>
+		<%=post.publishDateFormatted %>
+		  <div ng-non-bindable><%- post.body %></div>
+		</div>
+		<hr class="style-2" />
+		<% } else { %>
+		
+	<% }}) %>
+
+<% if(locals.pager && locals.pager.endPage > 1) { %>
+    <div class="post-pager">
+        <ul class="pagination">
+            <% if(locals.pager.currentPage > 1) { %>
+                <li class="first"><a href="?page=1">First</a></li>
+                <li class="previous"><a href="?page=<%= locals.pager.currentPage - 1 %>">Previous</a></li>
+            <% } else { %>
+                <li class="first disabled"><a>First</a></li>
+                <li class="previous disabled"><a>Previous</a></li>
+            <% } %>
+
+            <% for(var page = locals.pager.startPage; page <= locals.pager.endPage; page++) { %>
+                <li class="<%= page === locals.pager.currentPage ? 'active' : '' %>">
+                    <a href="?page=<%= page %>"><%= page %></a>
+                </li>
+            <% } %>
+
+            <% if(locals.pager.currentPage < locals.pager.totalPages) { %>
+                <li class="next"><a href="?page=<%= locals.pager.currentPage + 1 %>">Next</a></li>
+                <li class="last"><a href="?page=<%= locals.pager.totalPages %>">Last</a></li>
+            <% } else { %>
+                <li class="next disabled"><a>Next</a></li>
+                <li class="last disabled"><a>Last</a></li>
+            <% } %>
+        </ul>
+    </div>
+<% } %>
+

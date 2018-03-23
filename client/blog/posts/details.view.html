@@ -1,0 +1,26 @@
+﻿<div class="post-details">
+    <div class="container">
+        <div class="publish-date"><%= locals.post.publishDateFormatted %></div>
+        <h1><%= locals.post.title %></h1>
+        <div ng-non-bindable><%- locals.post.body %></div>
+
+        <div class="post-footer">
+            <p>By MEANie Demo</p>
+            <% if(locals.postTags && locals.postTags.length) { %>
+                <p>
+                    Tags: 
+                    <%- locals.postTags.map(function(tag) { return '<a href="/posts/tag/' + tag.slug + '">' + tag.text + '</a>'; }).join(', ') %>
+                </p>
+            <% } %>
+            <p class="social-share-buttons">
+                <span>Share on: </span>
+                <a class="facebook-button" href="http://facebook.com/sharer.php?u=<%= locals.url %>" target="_blank">Facebook</a>
+                <a class="twitter-button" href="http://twitter.com/intent/tweet?url=<%= locals.url %>&text=<%= locals.post.title %>" target="_blank">Twitter</a>
+            </p>
+        </div>
+        <hr />
+
+        <!-- comments -->
+        <div id="disqus_thread"></div>
+    </div>
+</div>

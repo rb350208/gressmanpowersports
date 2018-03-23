@@ -1,0 +1,184 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300&subset=latin,latin-ext);
+
+
+body {
+
+     background-repeat: no-repeat;
+   background: url('_content/images/bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    height:100%;
+    margin: 0px;
+    color: Black;
+    font-family: 'Oswald', sans-serif;
+    text-align: left;
+}
+hr.style-2 {
+   border: 0;
+  height: 0;
+  box-shadow: 0 0 4px 2px #ff1a1a;
+  width: 90%;
+}
+
+
+#content
+{
+	height: 1000px;
+	width: 1000px;
+	background-color: black;
+		 box-shadow: 0px 0px 35px #000000;
+    -moz-box-shadow: 0px 0px 35px #000000;
+    -webkit-box-shadow: 0px 0px 35px #000000;
+    -ms-box-shadow: 0px 0px 35px #000000;
+    -o-box-shadow: 0px 0px 35px #000000;
+    opacity: 0.97;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+#spc
+{
+	width: 20px;
+	opacity: 0.0;
+}
+#rightcon
+{
+	width: 300px;
+	background-color: black;
+		 box-shadow: 0px 0px 35px #000000;
+    -moz-box-shadow: 0px 0px 35px #000000;
+    -webkit-box-shadow: 0px 0px 35px #000000;
+    -ms-box-shadow: 0px 0px 35px #000000;
+    -o-box-shadow: 0px 0px 35px #000000;
+    opacity: 0.97;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+#leftcon 
+{
+	width: 550px;
+		background-color: black;
+		 box-shadow: 0px 0px 35px #000000;
+    -moz-box-shadow: 0px 0px 35px #000000;
+    -webkit-box-shadow: 0px 0px 35px #000000;
+    -ms-box-shadow: 0px 0px 35px #000000;
+    -o-box-shadow: 0px 0px 35px #000000;
+    opacity: 0.97;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    vertical-align: top;
+}
+
+#navbtn
+{
+	 background-color: #ff1a1a; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 33px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 500;
+      text-shadow: 1px 1px #262626;
+      	 box-shadow: 0px 0px 55px #000000;
+    -moz-box-shadow: 0px 0px 25px #000000;
+    -webkit-box-shadow: 0px 0px 25px #000000;
+    -ms-box-shadow: 0px 0px 25px #000000;
+    -o-box-shadow: 0px 0px 25px #000000;
+     border-radius: 6px;
+
+}
+#navbtn:hover {background-color: #b30000}
+
+#navbtn:active {
+  background-color: #ff1a1a;
+  box-shadow: 0 5px #262626;
+  transform: translateY(4px);
+}
+#navtblspc
+{
+	width: 12%;
+}
+#info
+{
+	color: #FFFFFF;
+	font-size: large;
+	text-shadow: 1px 1px #262626;
+	text-align: center;
+	
+}
+	
+#spacing
+{
+	height: 15px;
+}
+#footer
+{
+    
+   height: 100px;
+   width: 100%;
+    text-align: left;
+	vertical-align: bottom;
+    background: #e62e00; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#ff1a1a, #b30000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ff1a1a, #b30000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ff1a1a, #b30000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ff1a1a, #b30000); /* Standard syntax */
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+   z-index: 150;
+     box-shadow: 0px 0px 35px #000000;
+    -moz-box-shadow: 0px 0px 35px #000000;
+    -webkit-box-shadow: 0px 0px 35px #000000;
+    -ms-box-shadow: 0px 0px 35px #000000;
+    -o-box-shadow: 0px 0px 35px #000000;
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: small;
+}
+#footernav
+{
+	font-size: small;
+	font-weight: 400;
+	color: white;
+	text-decoration: none;
+	}
+	
+	#footernav:hover
+	{
+		color: #C8C8C8;
+	}
+
+#container
+{
+    width: 1000px;
+    height: 100%;
+     position: relative;
+    margin: 0 auto;
+    padding: 0px;
+}
+#header
+{
+ height: 215px;
+    font-family: 'Oswald', sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align: bottom;
+    background-repeat: no-repeat;
+    z-index: 99;
+    width: 100%;
+    left: 0px;
+    background: url('_content/images/gressmanlogo.png')no-repeat center;
+    font-size: large;
+    font-color: white;
+}

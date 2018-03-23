@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <base href="/" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="/_content/images/eng_ico.png" type="image/png" />
+    <link rel="icon" href="/_content/images/eng_ico.png" type="image/png" />
+
+    <title><%- locals.metaTitle || "Gressman Powersports | Fremont, Ohio" %></title>
+    <meta name="description" content="<%- locals.metaDescription || "Gressman Powersports | Fremont, Ohio" %>" />
+
+    <style>
+        /* custom - rbstyle */
+        <%- include('_content/rbstyle.css') %>
+    </style>
+
+    <% if(!locals.loggedIn) { // don't record traffic if logged in %>
+        <!-- analytics -->
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '/analytics.js?d=' + new Date().toISOString().slice(0, 13), 'ga');
+            ga('create', '<%= locals.googleAnalyticsAccount %>', 'auto');
+        </script>
+    <% } %>
+</head>
+ <body>
+        <div id="container">
+        	<div id="info">
+        		<a style="font-size: large; font-style: normal;">904 LIME STREET FREMONT, OHIO 43420 | 419-355-8980 </a>
+			</div>
+            <div id="header">
+            </div>
+            <div id="info">
+             ADVANCED TECHNOLOGY IN ENGINE DESIGN 
+            </div>
+			 <div id="spacing"></div>
+            <div id="nav">
+            <table id="navtbl">
+            	<tr>
+            		<td id="navtblspc"></td>
+            		<td id="navtblbtn"><a href="/" id="navbtn">HOME</a></td>
+            		<td id="navtblbtn"><a href="/about" id="navbtn">ABOUT</a></td>
+            		<td id="navtblbtn"><a href="/customers" id="navbtn">CUSTOMERS</a></td>
+            		<td id="navtblbtn"><a href="/engineservices" id="navbtn">SERVICES</a></td>
+            		<td id="navtblbtn"><a href="/contact" id="navbtn">CONTACT</a></td>
+            		<td id="navtblspc"></td>
+            		</tr>
+            </table>	
+            	
+            </div>
+            <div id="spacing"></div>
+            <div id="content">
+
+					    <!-- main -->
+    <main ui-view style="padding:2%;">
+        <% if(locals.templateUrl) { %>
+            <div ng-non-bindable>
+                <%- include(locals.templateUrl) %>
+            </div>
+        <% } %>
+	</main>
+            	</div>
+            <div id="spacing"></div>
+           
+        </div>
+         <div id="footer">
+         	<table>
+         		<tr>
+         			<td><img src="_content/images/gressmanlogosml.png" alt="logo" height="50px"></td>
+         			<td>
+         				  <a id="footernav" href="/"> Home </a>|<a id="footernav" href="/about"> About</a> |<a  id="footernav" href="/customers"> Customers</a> |<a id="footernav" href="/engineservices"> Services </a>|<a  id="footernav" href="/contact"> Contact</a>
+               </br>
+               Copyright 2018 Gressman Powersports Inc.
+         			</td>
+         		</tr>
+         	</table>        
+                </div>
+  <!-- jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+    <!-- angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-messages.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+
+    <!-- meanie -->
+    <script src="/_dist/app.min.js"></script>
+</body>
+</html>
